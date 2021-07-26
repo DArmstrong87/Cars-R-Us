@@ -1,3 +1,3 @@
-import { getTechnology } from "./database";
+import { getTechnology } from "./database.js";
 
 const technology = getTechnology()

@@ -1,3 +1,5 @@
+import { Interiors } from "./Interior.js"
+
 export const carsRUs = () => {
     return `
     <article class="choose_options">
@@ -6,6 +8,7 @@ export const carsRUs = () => {
         </section>
         <section class="choose_interior">
             <h2>Interior</h2>
+            ${Interiors()}
         </section>
         <section class="choose_tech">
             <h2>Technology</h2>
