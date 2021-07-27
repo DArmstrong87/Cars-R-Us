@@ -2,6 +2,15 @@ import { getWheels } from "./database.js";
 
 const wheels = getWheels()
 
+document.addEventListener (
+    "change",
+    (event) => {
+        if(event.target.name === "wheels"){
+            window.alert(`You chose the ${event.target.value} wheelset!`)
+        }
+    }
+)
+
 export const Wheels = () => {
     let html = "<ul>"
         
