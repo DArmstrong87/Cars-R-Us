@@ -31,16 +31,16 @@ const database = {
 
     technology: [
         {id: 1,
-        techPackage: "Basic Package (basic sound system)",
+        package: "Basic Package (basic sound system)",
         price: 250},
         {id: 2,
-        techPackage: "Navigation Package (includes integrated navigation controls)",
+        package: "Navigation Package (includes integrated navigation controls)",
         price: 350},
         {id: 3,
-        techPackage: "Visibility Package (includes side and reat cameras)",
+        package: "Visibility Package (includes side and reat cameras)",
         price: 650},
         {id: 4,
-        techPackage: "Navigation Package (includes integrated navigation controls)",
+        package: "Navigation Package (includes integrated navigation controls)",
         price: 1000}
     ],
 
