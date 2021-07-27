@@ -1,4 +1,4 @@
-import { getWheels } from "./database.js";
+import { getWheels, setWheels } from "./database.js";
 
 const wheels = getWheels()
 
@@ -6,7 +6,7 @@ document.addEventListener (
     "change",
     (event) => {
         if(event.target.name === "wheels"){
-            window.alert(`You chose the ${event.target.value} wheelset!`)
+            setWheels(parseInt(event.target.value))
         }
     }
 )
@@ -16,7 +16,7 @@ export const Wheels = () => {
         
     for (const wheelset of wheels){
         html += `<li id="interior--${wheelset.id}">
-        <input type="radio" name="wheels" value="${wheelset.style}" />
+        <input type="radio" name="wheels" value="${wheelset.id}" />
         ${wheelset.style}
         </li>`
     }

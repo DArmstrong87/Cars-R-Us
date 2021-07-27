@@ -1,4 +1,4 @@
-import { getTechnology } from "./database.js";
+import { getTechnology, setTech } from "./database.js";
 
 const technology = getTechnology()
 
@@ -6,7 +6,7 @@ document.addEventListener(
     "change",
     (event) => {
         if(event.target.name === "technology"){
-            window.alert(`You chose the ${event.target.value}!`)
+            setTech(parseInt(event.target.value))
         }
     }
 )
@@ -16,7 +16,7 @@ export const Technology = () => {
         
     for (const tech of technology){
         html += `<li id="interior--${tech.id}">
-        <input type="radio" name="technology" value="${tech.package}" />
+        <input type="radio" name="technology" value="${tech.id}" />
         ${tech.package}
         </li>`
     }

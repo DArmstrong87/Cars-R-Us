@@ -1,4 +1,4 @@
-import { getpaintColors } from "./database.js";
+import { getpaintColors, setColor } from "./database.js";
 
 const paintColors = getpaintColors()
 
@@ -6,7 +6,7 @@ document.addEventListener(
     "change",
     (event) => {
         if (event.target.name === "paint") {
-            window.alert(`You chose the color ${event.target.value}!`)
+            setColor(parseInt(event.target.value))
         }
     }
 )
@@ -16,7 +16,7 @@ export const Paint = () => {
         
     for (const color of paintColors){
         html += `<li id="interior--${color.id}">
-        <input type="radio" name="paint" value="${color.color}" />
+        <input type="radio" name="paint" value="${color.id}" />
         ${color.color}
         </li>`
     }

@@ -58,6 +58,10 @@ const database = {
         style: "18-inch Pair Spoke Black",
         price: 1250}
     ],
+    customOrder: [
+        {
+        }
+    ]
 }
 
 export const getpaintColors = () => {
@@ -74,4 +78,17 @@ export const getTechnology = () => {
 
 export const getWheels = () => {
     return database.wheels.map(wheelset => ({...wheelset}))
+}
+
+export const setColor = (id) => {
+    database.customOrder.colorId = id
+}
+export const setInterior = (id) => {
+    database.customOrder.interiorId = id
+}
+export const setTech = (id) => {
+    database.customOrder.techId = id
+}
+export const setWheels = (id) => {
+    database.customOrder.wheelsId = id
 }

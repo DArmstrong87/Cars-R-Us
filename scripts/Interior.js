@@ -1,4 +1,4 @@
-import { getInteriors } from "./database.js";
+import { getInteriors, setInterior } from "./database.js";
 
 const interiors = getInteriors()
 
@@ -6,7 +6,7 @@ document.addEventListener (
     "change",
     (event) => {
         if(event.target.name === "interior"){
-            window.alert(`You chose the ${event.target.value} interior!`)
+            setInterior(parseInt(event.target.value))
         }
     }
 )
@@ -16,7 +16,7 @@ export const Interiors = () => {
         
     for (const style of interiors){
         html += `<li id="interior--${style.id}">
-        <input type="radio" name="interior" value="${style.upholstery}" />
+        <input type="radio" name="interior" value="${style.id}" />
         ${style.upholstery}
         </li>`
     }
