@@ -2,5 +2,28 @@
 
 ul {
   list-style-type: none;  
+  margin: 10px;
+  padding-left: 10px;
 }
 
+.choose_options h2 {
+  margin: 00px;
+  background-color: lightgreen;
+  background-size: 110%;
+  text-indent: 10px;
+  padding: 5px;
+}
+
+.orderButton {
+  margin: 15px;
+}
+
+.choose_options {
+  display: flex;
+  margin: 10px;
+}
+.choose_paint, .choose_interior, .choose_tech, .choose_wheels {
+  border: 2px dotted black;
+  flex-basis: 25%;
+  margin: 5px;
+}

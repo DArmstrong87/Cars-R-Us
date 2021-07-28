@@ -1,7 +1,14 @@
+import { addCustomOrder } from "./database.js"
 import { Interiors } from "./Interior.js"
 import { Paint } from "./Paints.js"
 import { Technology } from "./Technology.js"
 import { Wheels } from "./Wheels.js"
+
+document.addEventListener("click", event=> {
+    if(event.target.id === "orderButton"){
+        addCustomOrder()
+    }
+})
 
 export const carsRUs = () => {
     return `
@@ -29,6 +36,8 @@ export const carsRUs = () => {
         <button id="orderButton">Create Custom Order</button>
     </article>
 
-    <article class="customOrders></article>
+    <article class="customOrders"></article>
+        <h2>Custom Car Order</h2>
+        
     `
 }
