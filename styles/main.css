@@ -14,8 +14,16 @@ ul {
   padding: 5px;
 }
 
-.orderButton {
+#orderButton {
   margin: 15px;
+  border-radius: 5px;
+  border: 2px solid black;
+  width: fit-content;
+  font-size: 20px;
+}
+
+#orderButton:active{
+  background-color: lightcoral;
 }
 
 .choose_options {
@@ -23,7 +31,14 @@ ul {
   margin: 10px;
 }
 .choose_paint, .choose_interior, .choose_tech, .choose_wheels {
-  border: 2px dotted black;
+  border: 2px dashed black;
   flex-basis: 25%;
   margin: 5px;
+}
+
+.customOrders {
+  max-width: fit-content;
+  border: 2px dashed red;
+  padding: 15px;
+  margin: auto;
 }

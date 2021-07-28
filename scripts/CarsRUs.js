@@ -7,7 +7,7 @@ import { addCustomOrder } from "./database.js"
 
 document.addEventListener("click", event=> {
     if(event.target.id === "orderButton"){
-        addCustomOrder() 
+        addCustomOrder()
     }
 })
 
@@ -37,8 +37,9 @@ export const carsRUsHtml = () => {
         <button id="orderButton">Create Custom Order</button>
     </article>
 
-    <article class="customOrders"></article>
-        <h2>Custom Car Order</h2>
+    <article class="customOrders">
+    <h2>Custom Car Order</h2>
             ${Orders()}
+    </article>
     `
 }

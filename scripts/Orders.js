@@ -6,7 +6,6 @@ const interiors = getInteriors()
 const technology = getTechnology()
 const wheels = getWheels()
 
-
 const buildOrderList = (order) => {
     const foundColor = colors.find(
         (color) => {
@@ -39,6 +38,7 @@ const buildOrderList = (order) => {
 }
 
 export const Orders = () => {
+    const orders = getOrders()
     let html = "<ul>"
     const listItems = orders.map(buildOrderList)
     html += listItems.join("")
