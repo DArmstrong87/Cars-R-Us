@@ -15,7 +15,7 @@ export const Interiors = () => {
     let html = "<ul>"
         
     for (const style of interiors){
-        html += `<li id="interior--${style.id}">
+        html += `<li>
         <input type="radio" name="interior" value="${style.id}" />
         ${style.upholstery}
         </li>`

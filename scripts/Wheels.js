@@ -15,7 +15,7 @@ export const Wheels = () => {
     let html = "<ul>"
         
     for (const wheelset of wheels){
-        html += `<li id="interior--${wheelset.id}">
+        html += `<li>
         <input type="radio" name="wheels" value="${wheelset.id}" />
         ${wheelset.style}
         </li>`

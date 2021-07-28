@@ -15,7 +15,7 @@ export const Technology = () => {
     let html = "<ul>"
         
     for (const tech of technology){
-        html += `<li id="interior--${tech.id}">
+        html += `<li>
         <input type="radio" name="technology" value="${tech.id}" />
         ${tech.package}
         </li>`

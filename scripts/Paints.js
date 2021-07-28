@@ -15,7 +15,7 @@ export const Paint = () => {
     let html = "<ul>"
         
     for (const color of paintColors){
-        html += `<li id="interior--${color.id}">
+        html += `<li>
         <input type="radio" name="paint" value="${color.id}" />
         ${color.color}
         </li>`
