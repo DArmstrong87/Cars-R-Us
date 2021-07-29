@@ -1,16 +1,28 @@
-import { getVehicleTypes } from "./database.js";
+import { getVehicleTypes, setVehicleType } from "./database.js";
 
+document.addEventListener(
+    "change",
+    (event) => {
+        if (event.target.name === "type"){
+            setVehicleType(parseInt(event.target.value))
+        }
+    }
+)
 
-const types = getVehicleTypes()
-
-export const vehicleTypes = () => {
+export const VehicleTypes = () => {
+    const types = getVehicleTypes()
     let html = `<ul>`
 
-    const typesList = types.map(type => 
-        {
-            html += `<li></li>`
-        }
+    const listTypes = types.map(type => 
+            {
+                html += `<li>
+                <input type="radio" name="type" value="${type.id}">
+                ${type.name}
+                </li>`
+            }
     )
 
+    html += listTypes.join("")
     html += `</ul>`
+    return html
 }

@@ -61,17 +61,17 @@ const database = {
     vehicleTypes: [
         {
             id: 1,
-            type: "Car",
+            name: "Car",
             priceModifer: 1
         },
         {
             id: 2,
-            type: "SUV",
+            name: "SUV",
             priceModifer: 1.5
         },
         {
             id: 3,
-            type: "Truck",
+            name: "Truck",
             priceModifer: 2.25
         }
     ],
