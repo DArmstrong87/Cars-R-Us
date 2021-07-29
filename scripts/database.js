@@ -62,17 +62,17 @@ const database = {
         {
             id: 1,
             name: "Car",
-            priceModifer: 1
+            priceModifier: 1
         },
         {
             id: 2,
             name: "SUV",
-            priceModifer: 1.5
+            priceModifier: 1.5
         },
         {
             id: 3,
             name: "Truck",
-            priceModifer: 2.25
+            priceModifier: 2.25
         }
     ],
     customOrders: [
