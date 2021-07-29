@@ -51,27 +51,66 @@ const database = {
         {id: 2,
         style: "17-inch Pair Radial Black",
         price: 850},
-        {id: 1,
+        {id: 3,
         style: "18-inch Pair Spoke Silver",
         price: 1050},
-        {id: 1,
+        {id: 4,
         style: "18-inch Pair Spoke Black",
         price: 1250}
     ],
+    customOrders: [
+        {
+            id: 1,
+            colorId: 1,
+            interiorId: 1,
+            techId: 1,
+            wheelsId: 1,
+            timestamp: Date.now()
+        }
+    ],
+    orderBuilder: {
+
+    }
 }
 
 export const getpaintColors = () => {
     return database.paintColors.map(color => ({...color}))
 }
-
 export const getInteriors = () => {
     return database.interiors.map(interior => ({...interior}))
 }
-
 export const getTechnology = () => {
     return database.technology.map(tech => ({...tech}))
 }
-
 export const getWheels = () => {
-    return database.wheels.map(wheelset => ({...wheelset}))
+    return database.wheels.map(wheel => ({...wheel}))
+}
+export const getOrders = () => {
+    return database.customOrders.map(order => ({...order}))
+}
+
+
+export const setColor = (id) => {
+    database.orderBuilder.colorId = id
+}
+export const setInterior = (id) => {
+    database.orderBuilder.interiorId = id
+}
+export const setTech = (id) => {
+    database.orderBuilder.techId = id
+}
+export const setWheels = (id) => {
+    database.orderBuilder.wheelsId = id
+}
+
+export const addCustomOrder = () => {
+    const newOrder = {...database.orderBuilder}
+    const lastIndex = database.customOrders.length - 1
+    newOrder.id = database.customOrders[lastIndex].id + 1
+
+    newOrder.timestamp = Date.now()
+    database.customOrders.push(newOrder)
+
+    database.orderBuilder = {}
+    document.dispatchEvent(new CustomEvent("stateChanged"))
 }
