@@ -1,9 +1,10 @@
 import { getVehicleTypes, setVehicleType } from "./database.js";
 
-document.addEventListener(
+
+document.addEventListener (
     "change",
     (event) => {
-        if (event.target.name === "type"){
+        if(event.target.name === "type"){
             setVehicleType(parseInt(event.target.value))
         }
     }

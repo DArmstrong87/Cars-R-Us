@@ -35,7 +35,7 @@ const buildOrderList = (order) => {
 
     const totalCost = (foundColor.price + foundInterior.price + 
         foundTech.price + foundWheels.price) 
-        // * foundVehicleType.priceModifier
+        * foundVehicleType.priceModifier
 
     const costString = totalCost.toLocaleString("en-US", {
         style: "currency",

@@ -82,6 +82,7 @@ const database = {
             interiorId: 1,
             techId: 1,
             wheelsId: 1,
+            typeId: 1,
             timestamp: Date.now()
         }
     ],
