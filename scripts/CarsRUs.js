@@ -4,6 +4,7 @@ import { Technology } from "./Technology.js"
 import { Wheels } from "./Wheels.js"
 import { Orders } from "./Orders.js"
 import { addCustomOrder } from "./database.js"
+import { VehicleTypes } from "./VehicleTypes.js"
 
 document.addEventListener("click", event=> {
     if(event.target.id === "orderButton"){
@@ -34,6 +35,9 @@ export const carsRUsHtml = () => {
     </article>
 
     <article class="orderButton">
+        <section>
+        ${VehicleTypes()}
+        </section>
         <button id="orderButton">Create Custom Order</button>
     </article>
 
