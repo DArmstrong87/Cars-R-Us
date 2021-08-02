@@ -1,4 +1,4 @@
-import { getOrderBuilder, getTechnology, setTech } from "./database.js";
+import { getOrderBuilder, getTechnology, setTech } from "./dataAccess.js";
 import { renderAllHTML } from "./main.js";
 
 const technology = getTechnology()

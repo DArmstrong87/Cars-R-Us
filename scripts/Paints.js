@@ -1,4 +1,4 @@
-import { getOrderBuilder, getpaintColors, setColor } from "./database.js";
+import { getOrderBuilder, getpaintColors, setColor } from "./dataAccess.js";
 import { renderAllHTML } from "./main.js";
 
 const paintColors = getpaintColors()
