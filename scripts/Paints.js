@@ -2,20 +2,20 @@ import { getOrderBuilder, getpaintColors, setColor } from "./database.js";
 import { renderAllHTML } from "./main.js";
 
 const paintColors = getpaintColors()
-const orderBuilder = getOrderBuilder()
 
 document.addEventListener(
     "change",
     (event) => {
         if (event.target.name === "paint") {
             setColor(parseInt(event.target.value))
-            renderAllHTML()
             console.log("State of data has changed. Regenerating HTML...")
+            renderAllHTML()
         }
     }
 )
 
 export const Paint = () => {
+    const orderBuilder = getOrderBuilder()
     let html = "<ul>"
 
     for (const color of paintColors) {

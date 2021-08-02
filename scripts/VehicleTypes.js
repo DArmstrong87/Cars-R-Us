@@ -1,20 +1,20 @@
 import { getOrderBuilder, getVehicleTypes, setVehicleType } from "./database.js";
 import { renderAllHTML } from "./main.js";
 
-const orderBuilder = getOrderBuilder()
 
 document.addEventListener(
     "change",
     (event) => {
         if (event.target.name === "type") {
             setVehicleType(parseInt(event.target.value))
-            renderAllHTML()
             console.log("State of data has changed. Regenerating HTML...")
+            renderAllHTML()
         }
     }
 )
 
 export const VehicleTypes = () => {
+    const orderBuilder = getOrderBuilder()
     const types = getVehicleTypes()
     let html = `<ul>`
 

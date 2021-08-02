@@ -2,20 +2,20 @@ import { getInteriors, getOrderBuilder, setInterior } from "./database.js";
 import { renderAllHTML } from "./main.js";
 
 const interiors = getInteriors()
-const orderBuilder = getOrderBuilder()
 
 document.addEventListener(
     "change",
     (event) => {
         if (event.target.name === "interior") {
             setInterior(parseInt(event.target.value))
-            renderAllHTML()
             console.log("State of data has changed. Regenerating HTML...")
+            renderAllHTML()
         }
     }
 )
 
 export const Interiors = () => {
+    const orderBuilder = getOrderBuilder()
     let html = "<ul>"
 
     for (const style of interiors) {

@@ -2,20 +2,20 @@ import { getOrderBuilder, getTechnology, setTech } from "./database.js";
 import { renderAllHTML } from "./main.js";
 
 const technology = getTechnology()
-const orderBuilder = getOrderBuilder()
 
 document.addEventListener(
     "change",
     (event) => {
         if (event.target.name === "technology") {
             setTech(parseInt(event.target.value))
-            renderAllHTML()
             console.log("State of data has changed. Regenerating HTML...")
+            renderAllHTML()
         }
     }
 )
 
 export const Technology = () => {
+    const orderBuilder = getOrderBuilder()
     let html = "<ul>"
 
     for (const tech of technology) {
