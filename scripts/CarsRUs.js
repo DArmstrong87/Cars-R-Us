@@ -3,12 +3,18 @@ import { Paint } from "./Paints.js"
 import { Technology } from "./Technology.js"
 import { Wheels } from "./Wheels.js"
 import { Orders } from "./Orders.js"
-import { addCustomOrder } from "./dataAccess.js"
+import { addCustomOrder, getOrderBuilder } from "./dataAccess.js"
 import { VehicleTypes } from "./VehicleTypes.js"
 
-document.addEventListener("click", event=> {
-    if(event.target.id === "orderButton"){
-        addCustomOrder()
+const orderBuilder = getOrderBuilder()
+
+document.addEventListener("click", event => {
+    if (event.target.id === "orderButton") {
+        if (orderBuilder.interiorId === 0 || orderBuilder.colorId === 0 || orderBuilder.techId === 0 || orderBuilder.wheelsId === 0 || orderBuilder.typeId === 0) {
+            window.alert('Please make all selections.')
+        } else {
+            addCustomOrder()
+        }
     }
 })
 
