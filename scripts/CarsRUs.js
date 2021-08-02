@@ -3,7 +3,7 @@ import { Paint } from "./Paints.js"
 import { Technology } from "./Technology.js"
 import { Wheels } from "./Wheels.js"
 import { Orders } from "./Orders.js"
-import { addCustomOrder } from "./database.js"
+import { addCustomOrder } from "./dataAccess.js"
 import { VehicleTypes } from "./VehicleTypes.js"
 
 document.addEventListener("click", event=> {

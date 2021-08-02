@@ -1,4 +1,4 @@
-import { getOrderBuilder, getWheels, setWheels } from "./database.js";
+import { getOrderBuilder, getWheels, setWheels } from "./dataAccess.js";
 import { renderAllHTML } from "./main.js";
 
 const wheels = getWheels()

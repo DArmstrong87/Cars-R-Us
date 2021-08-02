@@ -1,4 +1,4 @@
-import { getInteriors, getOrderBuilder, setInterior } from "./database.js";
+import { getInteriors, getOrderBuilder, setInterior } from "./dataAccess.js";
 import { renderAllHTML } from "./main.js";
 
 const interiors = getInteriors()
