@@ -119,6 +119,10 @@ export const database = {
         }
     ],
     orderBuilder: {
-
+        colorId: 0,
+        interiorId: 0,
+        techId: 0,
+        wheelsId: 0,
+        typeId: 0
     }
 }
