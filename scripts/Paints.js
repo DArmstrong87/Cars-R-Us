@@ -1,24 +1,35 @@
-import { getpaintColors, setColor } from "./database.js";
+import { getOrderBuilder, getpaintColors, setColor } from "./database.js";
+import { renderAllHTML } from "./main.js";
 
 const paintColors = getpaintColors()
+const orderBuilder = getOrderBuilder()
 
 document.addEventListener(
     "change",
     (event) => {
         if (event.target.name === "paint") {
             setColor(parseInt(event.target.value))
+            renderAllHTML()
+            console.log("State of data has changed. Regenerating HTML...")
         }
     }
 )
 
 export const Paint = () => {
     let html = "<ul>"
-        
-    for (const color of paintColors){
-        html += `<li>
-        <input type="radio" name="paint" value="${color.id}" />
-        ${color.color}
-        </li>`
+
+    for (const color of paintColors) {
+        if (color.id === orderBuilder.colorId) {
+            html += `<li>
+            <input type="radio" name="paint" value="${color.id}" checked/>
+            ${color.color}
+            </li>`
+        } else {
+            html += `<li>
+            <input type="radio" name="paint" value="${color.id}" />
+            ${color.color}
+            </li>`
+        }
     }
 
     html += "</ul>"

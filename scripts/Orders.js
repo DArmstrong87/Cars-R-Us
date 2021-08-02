@@ -33,8 +33,8 @@ const buildOrderList = (order) => {
         }
     )
 
-    const totalCost = (foundColor.price + foundInterior.price + 
-        foundTech.price + foundWheels.price) 
+    const totalCost = (foundColor.price + foundInterior.price +
+        foundTech.price + foundWheels.price)
         * foundVehicleType.priceModifier
 
     const costString = totalCost.toLocaleString("en-US", {
@@ -51,6 +51,6 @@ export const Orders = () => {
     const listItems = orders.map(buildOrderList)
     html += listItems.join("")
     html += "</ul>"
-    
+
     return html
 }
